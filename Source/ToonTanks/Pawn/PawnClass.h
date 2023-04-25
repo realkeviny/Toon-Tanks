@@ -7,6 +7,7 @@
 #include "PawnClass.generated.h"
 
 class UCapsuleComponent;
+class AProjectileBase;
 
 UCLASS()
 class TOONTANKS_API APawnClass : public APawn
@@ -14,6 +15,7 @@ class TOONTANKS_API APawnClass : public APawn
 	GENERATED_BODY()
 
 private:
+	//Components
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
 		UCapsuleComponent* CapsuleComp;
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
@@ -23,6 +25,9 @@ private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
 		USceneComponent* ProjectileSpawnPoint;
 
+	//Variables
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Projectile Type", meta = (AllowPrivateAccess = "true"))
+		TSubclassOf<AProjectileBase> ProjectileClass;
 public:
 	// Sets default values for this pawn's properties
 	APawnClass();
