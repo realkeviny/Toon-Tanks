@@ -25,7 +25,7 @@ void APawnTurret::HandleDestruction()
 void APawnTurret::CheckFireConditions()
 {
 	// if Player == null || is Dead THEN BAIL!
-	if (!PlayerPawn)
+	if (!PlayerPawn || !PlayerPawn->GetIsPlayerAlive())
 	{
 		return;
 	}
