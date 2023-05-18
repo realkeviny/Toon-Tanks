@@ -2,6 +2,8 @@ Binaries
 DerivedDataCache
 Intermediate
 Saved
+
+
 .vscode
 .vs
 *.VC.db
@@ -94,3 +96,6 @@ DerivedDataCache/*
 # Starter Content Ignored
 
 Content/StarterContent/*
+
+#Audio Source File
+Content/AudioSource/*

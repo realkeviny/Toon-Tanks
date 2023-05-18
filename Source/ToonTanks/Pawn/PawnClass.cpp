@@ -53,7 +53,7 @@ void APawnClass::HandleDestruction()
 	// --- Universal functionality ---
 	// Play death effects particle, sound and camera shake
 	UGameplayStatics::SpawnEmitterAtLocation(this, DeathParticle, GetActorLocation());
-
+	UGameplayStatics::PlaySoundAtLocation(this, DeathSound, GetActorLocation());
 	// -- Then do Child overrides
 	// -- PawnTurret - Inform GameMode Turret Died -> Then Destroy() self;
 
