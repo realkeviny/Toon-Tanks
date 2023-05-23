@@ -37,6 +37,10 @@ private:
 
 	UPROPERTY(EditAnywhere, Category = "Effects")
 		USoundBase* ReloadSound;
+
+	UPROPERTY(EditAnywhere, Category = "Effects")
+		TSubclassOf<UCameraShakeBase> HitShake;
+
 	//Functions
 	UFUNCTION()
 		void OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
